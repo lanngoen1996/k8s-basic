@@ -186,5 +186,6 @@ NAME                       READY   STATUS    RESTARTS   AGE
 service-5fbfcfb745-xgcjr   1/1     Running   0          10m
 ```
 
+- ** Default ingress URL endpoint is http://kubernetes.docker.internal **
+
 2. Open browser http://kubernetes.docker.internal/ping (endpoint form service route)
-   Default ingress URL endpoint is http://kubernetes.docker.internal
