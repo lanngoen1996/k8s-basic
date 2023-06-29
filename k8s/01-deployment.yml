@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service
+  namespace: basic-k8s
+  labels:
+    name: service
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      name: service
+  template:
+    metadata:
+      labels:
+        name: service
+    spec:
+      containers:
+        - name: service
+          image: go-service:1.0.0
+          imagePullPolicy: IfNotPresent
+          resources:
+            requests:
+              memory: 500Mi
+              cpu: 200m
+          ports:
+            - containerPort: 3333
+              name: service3333
