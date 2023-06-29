@@ -33,9 +33,8 @@ $ go run main.go
 
 ```json
 {
-  "message": "pong:
+  "message": "pong"
 }
-
 ```
 
 ### Build go image
